@@ -1,0 +1,175 @@
+/* Stylesheet for Tye Campbell.com */
+/* Thanks for right clicking! */
+/* Colors: Blue: #317DDE, Orange: #FFAC26 Red: #FF2626, Green: #23EC23; */;
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+html { 
+  background: url("../images/tye-main.png") no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: transparent;
+}
+
+
+/*
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	margin-bottom: 60px;
+}
+
+*/
+
+
+/*Header Row*/
+
+#namehead {
+	font-family: 'Poiret One', cursive;
+	color: black;
+	text-shadow:
+		-1px -1px 0 #FFF,
+		 1px -1px 0 #FFF,
+		-1px  1px 0 #FFF,
+		 1px  1px 0 #FFF;
+}
+
+#namehead h1 {
+	margin-bottom: 0.1em;
+	letter-spacing: 0.2em;
+	font-size: 3.2em;
+	font-variant: small-caps;
+}
+
+#namehead h5 { 
+	margin-top: 0;
+}
+
+/*Vertical Center Main Content*/
+
+.outter-container {
+	display: table;
+/*	width: 100%;  */
+	height: 125rem;
+	min-height: 100%;
+}
+
+@media only screen and (max-height: 1200px){
+	.outter-container {
+		height: 100rem;
+	}
+}
+
+@media only screen and (max-height: 1000px){
+	.outter-container {
+		height: 84rem;
+	}
+}
+
+@media only screen and (max-height: 700px){
+	.outter-container {
+		height: 62rem;
+	}
+}
+
+@media only screen and (max-height: 500px){
+	.outter-container {
+		height: 32rem;
+	}
+}
+
+.inner-container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*Home Screen Main Menu*/
+
+.homebuttons {
+	font-family: 'Expletus Sans', cursive;
+}
+
+.homebuttons h1 {
+	font-size: 4.0em;
+}
+
+@media only screen and (max-height: 500px){
+	.homebuttons h1{
+		font-size: 2.0em;
+	}
+}
+
+#portfoliolink {
+	color: #317DDE;
+	text-decoration: none;
+
+}
+
+#portfoliolink:hover {
+	color: #0861D4;
+	text-shadow:
+		-1px -1px 0 #FFF,
+		 1px -1px 0 #FFF,
+		-1px  1px 0 #FFF,
+		 1px  1px 0 #FFF;	
+}
+
+#contactlink {
+	color: #23EC23;
+	text-decoration: none;
+}
+
+#contactlink:hover {
+	color: #00DB00;
+	text-shadow:
+		-1px -1px 0 #FFF,
+		 1px -1px 0 #FFF,
+		-1px  1px 0 #FFF,
+		 1px  1px 0 #FFF;	
+}
+
+#aboutlink {
+	color: #FFAC26;
+	text-decoration: none;
+
+}
+
+#aboutlink:hover {
+	color: #F69800;
+	text-shadow:
+		-1px -1px 0 #FFF,
+		 1px -1px 0 #FFF,
+		-1px  1px 0 #FFF,
+		 1px  1px 0 #FFF;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.footer {
+	position: absolute;
+  	bottom: 0;
+  	width: 100%;
+  /* Set the fixed height of the footer here */
+
+  	height: auto;
+  	background-color: none;
+}
+
+footer a { 
+	color: #f5f5f5;
+}
+
+footer a:hover {
+	color: #FF6666;
+}
