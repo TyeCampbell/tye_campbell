@@ -38,9 +38,30 @@ body {
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   background-color: white;
-  background-image: url("../images/tye-home-bw.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
+}
+
+.bgswitch_home {
+  background-image: url("../images/tye-home-bw.png");
+}
+
+.bgswitch_portfolio {
+  background-image: url("../images/tye-portfolio-bw.png");
+}
+
+.bgswitch_about {
+  background-image: url("../images/tye-about-bw.png");
+}
+
+.bgswitch_contact {
+  background-image: url("../images/tye-contact-bw.png");
+}
+
+#portfoliopage,
+#aboutpage,
+#contactpage {
+  display: none;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
