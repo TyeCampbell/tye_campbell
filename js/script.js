@@ -1,3 +1,11 @@
+/* ---------- Marriage Year Update ---------- */
+
+	var theYear = new Date().getFullYear();
+
+	$("#marriageyear").html(theYear-2010);
+
+/* ---------- Link Navigation & Background Change ---------- */
+
 $(document).ready(function(){
 	$("#portfoliolink").mouseover(function(){
 		$("body").css("background-image", "url('images/tye-portfolio-bw.png')");
