@@ -1,8 +1,12 @@
 /* ---------- Marriage Year Update ---------- */
 
-	var theYear = new Date().getFullYear();
+	var todayDate = new Date();
 
-	$("#marriageyear").html(theYear-2010);
+	var marriageDate = new Date("July 24, 2010");
+
+	var marriageyear = Math.floor((todayDate - marriageDate)/31557600000);
+
+	$("#marriageyear").html(marriageyear);
 
 /* ---------- Link Navigation & Background Change ---------- */
 
