@@ -25,28 +25,28 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#portfoliolink").click(function(){
-		$("#homepage").hide();
-		$("#contactpage").hide();		
-		$("#aboutpage").hide();
-		$("#portfoliopage").show();
+		$("#homepage").fadeOut();
+		$("#contactpage").fadeOut();		
+		$("#aboutpage").fadeOut();
+		$("#portfoliopage").delay(600).fadeIn();
 	});
 });
 
 $(document).ready(function(){
 	$("#aboutlink").click(function(){
-		$("#homepage").hide();
-		$("#portfoliopage").hide();
-		$("#contactpage").hide();		
-		$("#aboutpage").show();
+		$("#homepage").fadeOut();
+		$("#portfoliopage").fadeOut();
+		$("#contactpage").fadeOut();		
+		$("#aboutpage").delay(600).fadeIn();
 	});
 });
 
 $(document).ready(function(){
 	$("#contactlink").click(function(){
-		$("#homepage").hide();
-		$("#portfoliopage").hide();
-		$("#aboutpage").hide();
-		$("#contactpage").show();		
+		$("#homepage").fadeOut();
+		$("#portfoliopage").fadeOut();
+		$("#aboutpage").fadeOut();
+		$("#contactpage").delay(600).fadeIn();		
 	});
 });
 
