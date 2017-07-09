@@ -50,3 +50,11 @@ $(document).ready(function(){
 	});
 });
 
+$(document).ready(function(){
+	$("#preview-honeyhill").click(function(){
+		$("#previewTitle").text("Honey Hill Events");
+		$("#previewSite").attr("src","http://www.honeyhillevents.com");
+		$(".previewLink").attr("href","http://www.honeyhillevents.com");
+	});
+});
+

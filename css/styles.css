@@ -226,6 +226,20 @@ body {
 }
 
 /*
+ * Modal Website Preview 
+ */
+
+iframe {
+  width: 100%;
+  height: 500px;
+  /*border: none;*/
+}
+
+#previewTitle {
+  font-style: italic;
+}
+
+/*
  * Portfolio Page
  */
 

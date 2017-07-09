@@ -90,18 +90,16 @@
           </div>
 
   <!-- Website View Modal -->
-          <div class="modal fade" id="websiteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal fade" id="websiteModal" tabindex="-1" role="dialog" aria-labelledby="websiteModal">
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">My Technologies List</h4>
+                  <h4 class="modal-title">Tye Campbell Portfolio - <span id="previewTitle"></span></h4>
                 </div>
                 <div class="modal-body">
-                  <iframe name="iframe-web-preview"></iframe>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <p>This single page website was built on a Bootstrap 3 framework using PHP, HTML, CSS &amp; jQuery. This freelance project had to be completed in less than two weeks in my spare time. The client desired a simple look so I designed the layout and overall feel of the site to match their needs. I contracted a graphic designer to create the accents on the images based on my specifications. This site features a contact form that emails both owners directly to their personal email, Google maps API and scrollable page links. Click <a class="previewLink" href="#">here</a> to go directly to the site.</p>
+                  <iframe id="previewSite" src="#" name="web-preview">Oops! Your browswer does not support iframes. Click <a class="previewLink" href="#">HERE</a> instead.</iframe>
                 </div>
               </div>
             </div>
@@ -130,7 +128,8 @@
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <img src="images/portfolio-honeyhill.png" alt="Honey Hill Events Website Preview">
-                  <a href="http://www.honeyhillevents.com">
+                  <!-- <a href="http://www.honeyhillevents.com"> -->
+                  <a id="preview-honeyhill" href="#" data-toggle="modal" data-target="#websiteModal">
                     <div class="carousel-caption">
                       <h3>Honey Hill Events</h3>
                       <p>A single page, expedited, freelance project for a brand new event center.</p>
@@ -140,7 +139,8 @@
 
                 <div class="item">
                   <img src="images/portfolio-objectivebox.png" alt="Objective Box Website Preview">
-                  <a href="http://www.objectivebox.com">
+                  <!-- <a href="http://www.objectivebox.com"> -->
+                  <a id="preview-objectivebox" href="#" data-toggle="modal" data-target="#websiteModal">
                     <div class="carousel-caption">
                       <h3>Objective Box</h3>
                       <p>Built prior to training for my own personal small business venture.</p>
@@ -151,7 +151,8 @@
 
                 <div class="item">
                   <img src="images/portfolio-sandyspetshop.png" alt="Sandy's Pet Shop Final Project">
-                  <a href="http://www.tyecampbell.com/sandyspetshop/">
+                  <!-- <a href="http://www.tyecampbell.com/sandyspetshop/"> -->
+                  <a id="preview-sandy" href="#" data-toggle="modal" data-target="#websiteModal">
                     <div class="carousel-caption">
                       <h3>Sandy's Pet Shop</h3>
                       <p>Mock website for development certifcation final project. Recieved a 97% grade.</p>
