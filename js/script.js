@@ -1,4 +1,6 @@
-/* ---------- Marriage Year Update ---------- */
+/* ---------- Date Updater ---------- */
+
+// Marriage Date 
 
 	var todayDate = new Date();
 
@@ -8,17 +10,27 @@
 
 	$("#marriageyear").html(marriageyear);
 
+// Objective Box Date
+
+	var todayDate = new Date();
+
+	var creationDate = new Date("October 28, 2014");
+
+	var timesince = Math.floor((todayDate - creationDate)/31557600000);
+
+	$("#OByear").html(timesince);	
+
 /* ---------- Link Navigation & Background Change ---------- */
 
 $(document).ready(function(){
-	$("#portfoliolink").mouseover(function(){
+	$("#portfoliolink").click(function(){
 		$("body").css("background-image", "url('images/tye-portfolio-bw.png')");
 	});
 
-	$("#aboutlink").mouseover(function(){
+	$("#aboutlink").click(function(){
 		$("body").css("background-image", "url('images/tye-about-bw.png')");
 	});
-	$("#contactlink").mouseover(function(){
+	$("#contactlink").click(function(){
 		$("body").css("background-image", "url('images/tye-contact-bw.png')");
 	});
 });
@@ -50,6 +62,36 @@ $(document).ready(function(){
 	});
 });
 
+/* ---------- Portfolio Previews ---------- */
+
+// Preview - Honey Hill Events 
+
+$(document).ready(function(){
+	$("#preview-honeyhill").click(function(){
+		$("#previewBody-objectivebox").hide();
+		$("#previewBody-sandyspet").hide();
+		$("#previewBody-honeyhill").show();
+		$("#previewTitle").text("Honey Hill Events");
+		$("#previewSite").attr("src","http://www.honeyhillevents.com");
+		$(".previewLink").attr("href","http://www.honeyhillevents.com");
+	});
+});
+
+// Preview - Objective Box
+
+$(document).ready(function(){
+	$("#preview-objectivebox").click(function(){
+		$("#previewBody-honeyhill").hide();
+		$("#previewBody-sandyspet").hide();
+		$("#previewBody-objectivebox").show();
+		$("#previewTitle").text("Objective Box");
+		$("#previewSite").attr("src","http://www.objectivebox.com");
+		$(".previewLink").attr("href","http://www.objectivebox.com");
+	});
+});
+
+// Preview - Sandy's Pet Shop
+
 $(document).ready(function(){
 	$("#preview-honeyhill").click(function(){
 		$("#previewTitle").text("Honey Hill Events");
@@ -57,4 +99,3 @@ $(document).ready(function(){
 		$(".previewLink").attr("href","http://www.honeyhillevents.com");
 	});
 });
-
