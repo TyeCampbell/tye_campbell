@@ -250,9 +250,9 @@ function sendForm() {
 	ajax.onreadystatechange = function() {
 		if (ajax.readyState == 4 && ajax.status == 200) {
 			if (ajax.responseText == "success") {
-				$('#mymodal').modal({show: true});
+				$('#contactModal').modal({show: true});
 				$("#statusheader").html("Thank you!");		
-				$("#status").html("Thanks for reaching out to us, " + $firstName.val() + "! We will respond to your request as soon as possible.");						
+				$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");						
 				$firstName.val("");
 				$email.val("");
 				$message.val("");
