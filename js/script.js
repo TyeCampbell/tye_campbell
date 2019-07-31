@@ -1,6 +1,6 @@
 /* ---------- Date Updater ---------- */
 
-// Marriage Date 
+// Marriage Date
 
 	var todayDate = new Date();
 
@@ -18,7 +18,7 @@
 
 	var timesince = Math.floor((todayDate - creationDate)/31557600000);
 
-	$("#OByear").html(timesince);	
+	$("#OByear").html(timesince);
 
 /* ---------- Link Navigation & Background Change ---------- */
 
@@ -38,7 +38,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$("#portfoliolink").click(function(){
 		$("#homepage").fadeOut();
-		$("#contactpage").fadeOut();		
+		$("#contactpage").fadeOut();
 		$("#aboutpage").fadeOut();
 		$("#portfoliopage").delay(600).fadeIn();
 	});
@@ -48,7 +48,7 @@ $(document).ready(function(){
 	$("#aboutlink").click(function(){
 		$("#homepage").fadeOut();
 		$("#portfoliopage").fadeOut();
-		$("#contactpage").fadeOut();		
+		$("#contactpage").fadeOut();
 		$("#aboutpage").delay(600).fadeIn();
 	});
 });
@@ -58,22 +58,39 @@ $(document).ready(function(){
 		$("#homepage").fadeOut();
 		$("#portfoliopage").fadeOut();
 		$("#aboutpage").fadeOut();
-		$("#contactpage").delay(600).fadeIn();		
+		$("#contactpage").delay(600).fadeIn();
 	});
 });
 
 /* ---------- Portfolio Previews ---------- */
 
-// Preview - Honey Hill Events 
+// Preview - Honey Hill Events
 
 $(document).ready(function(){
 	$("#preview-honeyhill").click(function(){
 		$("#previewBody-objectivebox").hide();
 		$("#previewBody-sandyspet").hide();
+		$("#previewBody-hlfarm").hide();
 		$("#previewBody-honeyhill").show();
 		$("#previewTitle").text("Honey Hill Events");
-		$("#previewSite").attr("src","http://www.honeyhillevents.com");
+		$("#previewSite").attr("src","images/portfolio-macbook-honeyhill.png");
+		$('#previewLinkPara').show();
 		$(".previewLink").attr("href","http://www.honeyhillevents.com");
+	});
+});
+
+// Preview - Heirloom Farm
+
+$(document).ready(function(){
+	$("#preview-hlfarm").click(function(){
+		$("#previewBody-objectivebox").hide();
+		$("#previewBody-sandyspet").hide();
+		$("#previewBody-honeyhill").hide();
+		$("#previewBody-hlfarm").show();
+		$("#previewTitle").text("Heirloom Farm");
+		$("#previewSite").attr("src","images/portfolio-macbook-hlfarm.png");
+		$('#previewLinkPara').show();
+		$(".previewLink").attr("href","http://www.hlfarm.com");
 	});
 });
 
@@ -83,10 +100,12 @@ $(document).ready(function(){
 	$("#preview-objectivebox").click(function(){
 		$("#previewBody-honeyhill").hide();
 		$("#previewBody-sandyspet").hide();
+		$("#previewBody-hlfarm").hide();
 		$("#previewBody-objectivebox").show();
 		$("#previewTitle").text("Objective Box");
-		$("#previewSite").attr("src","http://www.objectivebox.com");
-		$(".previewLink").attr("href","http://www.objectivebox.com");
+		$('#previewLinkPara').hide();
+		$("#previewSite").attr("src","images/portfolio-macbook-objectivebox.png");
+		// $("#previewSite").attr("alt","Objective Box Website Preview on MacBook");
 	});
 });
 
@@ -96,9 +115,12 @@ $(document).ready(function(){
 	$("#preview-sandy").click(function(){
 		$("#previewBody-honeyhill").hide();
 		$("#previewBody-objectivebox").hide();
+		$("#previewBody-hlfarm").hide();
 		$("#previewBody-sandyspet").show();
 		$("#previewTitle").text("Sandy's Pet Shop");
-		$("#previewSite").attr("src","http://www.tyecampbell.com/sandyspetshop/");
+		// $("#previewSite").attr("src","http://www.tyecampbell.com/sandyspetshop/");
+		$('#previewLinkPara').show();
+		$("#previewSite").attr("src","images/portfolio-macbook-sandy.png");
 		$(".previewLink").attr("href","http://www.tyecampbell.com/sandyspetshop/");
 	});
 });
@@ -108,7 +130,7 @@ $(document).ready(function(){
 
  $(document).ready(function(){
 	$("#preview-sandy-admin").click(function(){
-		$("#previewSite").attr("src","http://www.tyecampbell.com/sandyspetshop/admin.php");
+		$("#previewSite").attr("src","images/portfolio-macbook-sandyAdmin.png");
 	});
 });
 
@@ -200,11 +222,11 @@ $("#message").blur(function(){
 
 
 function submitForm() {
-	
+
 	var $firstName = $("#fname");
 	var $email = $("#email");
 	var $message = $("#message");
-	
+
 	function submitValidate(element) {
 		$(element).parent().addClass("has-error");
 		$(element).next("span").addClass("glyphicon-remove");
@@ -212,7 +234,7 @@ function submitForm() {
 	};
 
 	if ($firstName.val() == "" || $email.val() == "" || $message.val() == "" || $message.val().length < 5) {
-		
+
 		$("#sendmessage").addClass("disabled");
 
 		if ($firstName.val() == "") {
@@ -225,7 +247,7 @@ function submitForm() {
 
 		if ($message.val() == "" || $message.val().length < 5){
 			submitValidate($message);
-		};				
+		};
 	} else {
 		sendForm();
 	}
@@ -234,7 +256,7 @@ function submitForm() {
 /* SendForm via AJAX*/
 
 function sendForm() {
-		
+
 	$("#sendmessage").addClass("disabled");
 
 	var $firstName = $("#fname");
@@ -244,22 +266,22 @@ function sendForm() {
 	var formdata = new FormData();
 	formdata.append("fname", $firstName.val());
 	formdata.append("email", $email.val());
-	formdata.append("message", $message.val());	
+	formdata.append("message", $message.val());
 	var ajax = new XMLHttpRequest();
 	ajax.open("POST", "email_parser.php");
 	ajax.onreadystatechange = function() {
 		if (ajax.readyState == 4 && ajax.status == 200) {
 			if (ajax.responseText == "success") {
 				$('#contactModal').modal({show: true});
-				$("#statusheader").html("Thank you!");		
-				$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");						
+				$("#statusheader").html("Thank you!");
+				$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
 				$firstName.val("");
 				$email.val("");
 				$message.val("");
-				$("#sendmessage").removeClass("disabled");		
+				$("#sendmessage").removeClass("disabled");
 			} else {
-				$('#mymodal').modal({show: true});				
-				$("#statusheader").html("There was an error sending your message. Please try again later.");				
+				$('#mymodal').modal({show: true});
+				$("#statusheader").html("There was an error sending your message. Please try again later.");
 				$("#status").html(ajax.responseText);
 				$("#sendmessage").removeClass("disabled");
 			}

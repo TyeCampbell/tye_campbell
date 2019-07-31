@@ -41,10 +41,10 @@
     <link href="css/styles.css" rel="stylesheet">
     <!-- <link href="css/style.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Passion+One|Poiret+One" rel="stylesheet">
-    
+
     <!-- jQuery -->
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-    
+
     <!-- Font Awesome Icons -->
     <script src="https://use.fontawesome.com/65ec7bb610.js"></script>
 
@@ -87,16 +87,20 @@
                 </div>
                 <div class="modal-body">
                   <p>
+                    JavaScript (ES6)<br>
+                    React.js<br>
+                    jQuery<br>
                     HTML/HTML5<br>
                     CSS<br>
-                    JavaScript<br>
-                    jQuery<br>
-                    SQL<br>
+                    Bootstrap 3<br>
+                    Swift iOS<br>
                     PHP<br>
-                    Bootstrap<br>
+                    SQL<br>
                     XML<br>
                     AJAX<br>
-                    Mac iOS &amp; Windows<br>
+                    Mac &amp; Windows<br>
+                    Apple Xcode<br>
+                    Atom.io<br>
                     Sublime Text 2<br>
                     GitHub<br>
                     XAMPP/MAMP<br>
@@ -119,10 +123,13 @@
                 </div>
                 <div class="modal-body">
                   <p id="previewBody-honeyhill">This single page website was built on a Bootstrap 3 framework using PHP, HTML, CSS &amp; jQuery. This freelance project had to be completed in less than two weeks in my spare time. The client desired a simple look so I designed the layout and overall feel of the site to match their needs. I contracted a graphic designer to create the accents on the images based on my specifications. This site features a contact form that emails both owners directly to their personal email, Google maps API and scrollable page links.</p>
-                  <p id="previewBody-objectivebox">This website was built with a site builder tool hosted by Homestead prior to my training <span id="OByear"></span> years ago. I did however create the layout, design and all of the digital artwork and branding. After hiring and directing an iOS app development team to turn my concept to a working applicaiton, I had to quickly desgin and build a website to advertise my digital product. This whole process started my journey to pursue a career in web development.</p>
-                  <p id="previewBody-sandyspet">Web development certificate final project. Recieved a 97%. Was given a mock customer with specific needs. Had to come up with the design and function on my own. Built on a bootstrap framework, using HTML5, CSS, PHP, SQL, jQuery. The most intricate portion was an <a id="preview-sandy-admin" href="#">appointment request organizer</a> that connects to a SQL database using PHP. Customers would enter appointment requests on the main site and the owner would connect to an admin page to edit or delete requests.</p> 
-                  <p>Click <a class="previewLink" href="#">here</a> to directly view this site.</p>
-                  <iframe id="previewSite" src="#" name="web-preview">Oops! Your browswer does not support iframes. Click <a class="previewLink" href="#">HERE</a> instead.</iframe>
+                  <p id="previewBody-hlfarm">In 2017, the farmers that own this business reached out to me for help with their Wordpress site. They created the orignal site but it was slow and in dire need of updating. I took over the project, updated the site backend, created a child-theme for custom refinements, assisted with image marketing, branding and strategy. Since then I update and maintain the site as needed.</p>
+                  <p id="previewBody-objectivebox">This website was built with a site builder tool hosted by Homestead prior to my training <span id="OByear"></span> years ago. I did however create the layout, design and all of the digital artwork and branding. After hiring and directing an iOS app development team to turn my concept to a working application, I had to quickly desgin and build a website to advertise my digital product. This whole process started my journey to pursue a career in web development.</p>
+                  <p id="previewBody-sandyspet">Web development certificate final project. Recieved a 97%. Was given a mock customer with specific needs. Had to come up with the design and function on my own. Built on a bootstrap framework, using HTML5, CSS, PHP, SQL, jQuery. The most intricate portion was an <a id="preview-sandy-admin" href="#">appointment request organizer</a> that connects to a SQL database using PHP. Customers would enter appointment requests on the main site and the owner would connect to an admin page to edit or delete requests.</p>
+                  <p id="previewLinkPara">Click <a class="previewLink" href="#">here</a> to directly view this site.</p>
+                  <img id="previewSite" src="#" alt="#">
+
+                  <!-- <iframe id="previewSite" src="#" name="web-preview">Oops! Your browswer does not support iframes. Click <a class="previewLink" href="#">HERE</a> instead.</iframe> -->
                 </div>
               </div>
             </div>
@@ -135,9 +142,9 @@
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                   <h4 class="modal-title"><span id="statusheader"></span></h4>
-                </div>      
+                </div>
                 <div class="modal-body">
-                  <span id="status"></span>       
+                  <span id="status"></span>
                 </div>
               </div>
             </div>
@@ -163,6 +170,7 @@
               </ol> -->
 
               <!-- Wrapper for slides -->
+                <!-- Honeyhill Events Site -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
                   <img src="images/portfolio-honeyhill.png" alt="Honey Hill Events Website Preview">
@@ -175,6 +183,19 @@
                   </a>
                 </div>
 
+                <!-- Heirloom Farm Site -->
+                <div class="item">
+                  <img src="images/portfolio-hlfarm.png" alt="Heirloom Farm Website Preview">
+                  <!-- <a href="http://www.honeyhillevents.com"> -->
+                  <a id="preview-hlfarm" href="#" data-toggle="modal" data-target="#websiteModal">
+                    <div class="carousel-caption">
+                      <h3>Heirloom Farm</h3>
+                      <p>A Wordpress site that I maintain and update for the owners.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Objective Box Site -->
                 <div class="item">
                   <img src="images/portfolio-objectivebox.png" alt="Objective Box Website Preview">
                   <!-- <a href="http://www.objectivebox.com"> -->
@@ -187,6 +208,7 @@
                   </a>
                 </div>
 
+                <!-- Sandy's Pet Shop Site -->
                 <div class="item">
                   <img src="images/portfolio-sandyspetshop.png" alt="Sandy's Pet Shop Final Project">
                   <!-- <a href="http://www.tyecampbell.com/sandyspetshop/"> -->
@@ -197,8 +219,9 @@
                     </div>
                   </a>
                   </a>
-                </div>                
+                </div>
 
+                <!-- My Technologies List -->
                 <div class="item">
                   <img src="images/portfolio-technologies.png" alt="Objective Box Website Preview">
                   <a href="#" data-toggle="modal" data-target="#techModal">
@@ -228,20 +251,20 @@
             <h1 class="cover-heading heading-lg">About Me</h1>
             <div class="pre-scrollable lead">
             <h1 class="cover-heading heading-sm">About Me</h1>
-              <p>After 18 years of sales &amp; business experience I decided to redirect my career path toward web development; something I have become very passionate since I built my first business website in 2005. I have always had the ability to design and create but I have lacked the formal training. I took the initiative in January 2016 to enroll in a self-paced, accelerated Desktop &amp; Mobile Web Development and Responsive Design certificate program from Des Moines Area Community College where I graduated in March 2017 with a 96%. With this coursework I have experience, both training and hands on, with HTML, CSS, JavaScript, jQuery, PHP, XML, AJAX, Bootstrap and responsive design. A <a href="#" data-toggle="modal" data-target="#techModal">full list of my technologies</a> I have used are available and be sure check out my portfolio link of all the sites I have and or maintained. 
+              <p>After 18 years of sales &amp; business experience I decided to redirect my career path toward web development; something I have become very passionate since I built my first business website in 2005. I have always had the ability to design and create but I have lacked the formal training. I took the initiative in January 2016 to enroll in a self-paced, accelerated Desktop &amp; Mobile Web Development and Responsive Design certificate program from Des Moines Area Community College where I graduated in March 2017 with a 96%. With this coursework I have experience, both training and hands on, with HTML, CSS, JavaScript, jQuery, PHP, XML, AJAX, Bootstrap and responsive design. A <a href="#" data-toggle="modal" data-target="#techModal">full list of my technologies</a> I have used are available and be sure check out my portfolio link of all the sites I have and or maintained.
               </p>
-              <p>In May of 2004, I graduated from college with an Associate of Applied Science Degree in Business Administration. I have  past experience with supervising employees and maintaining exceptionally high standards at our family-owned business where I was previously employed for 12 years. From March 2005 to April 2007 I established a part-time web based business selling products to consumers online. I gained experience in operating small businesses and have extensive knowledge with communication, visual design, and how to develop an internet based company. In 2012, I conceptualized a new product and led a development team to create an <a href="https://itunes.apple.com/us/app/objective-box/id927781177?mt=8">iOS app</a> that is currently in use around the world. 
+              <p>In May of 2004, I graduated from college with an Associate of Applied Science Degree in Business Administration. I have  past experience with supervising employees and maintaining exceptionally high standards at our family-owned business where I was previously employed for 12 years. From March 2005 to April 2007 I established a part-time web based business selling products to consumers online. I gained experience in operating small businesses and have extensive knowledge with communication, visual design, and how to develop an internet based company. In 2012, I conceptualized a new product and led a development team to create an iOS app that was in use around the world until spring of 2019.
               </p>
-              <p>My personal life involves spending time with my wife of <span id="marriageyear"></span> years and being outdoors. Whether the outdoor time is in my <a href="https://www.youtube.com/user/TyeChannel">canoe</a>, camping, hiking, shooting my traditional bow or flying stunt kites I love being in God’s creation. I actively serve in our local church, can’t get enough time for books (lots of books) and enjoy building things with my hands. All of these facets of my life refresh my mind and prepare me to work hard when it comes to web development. 
+              <p>My personal life involves spending time with my wife of <span id="marriageyear"></span> years and being outdoors. Whether the outdoor time is in my <a href="https://www.youtube.com/user/TyeChannel">canoe</a>, on one of my bikes, camping, hiking, shooting my traditional bow or flying stunt kites I love being in God’s creation. I actively serve in our local church, can’t get enough time for books (lots of books) and enjoy building things with my hands. All of these facets of my life refresh my mind and prepare me to work hard when it comes to web development.
               </p>
-            </div>  
+            </div>
           </div>
 
   <!-- Contact Page Div -->
           <div id="contactpage" class="inner cover">
             <h1 class="cover-heading">Contact</h1>
-            <form name="contactus" id="contactus" onsubmit="submitForm(); return false"> 
-        
+            <form name="contactus" id="contactus" onsubmit="submitForm(); return false">
+
               <div class="form-group-sm has-feedback">
                 <label for="fname">Name:</label>
                 <input type="text" class="form-control has-error" id="fname">
@@ -252,15 +275,15 @@
               <div class="form-group-sm has-feedback">
                 <label for="email">Email Address:</label>
                 <input type="email" class="form-control" id="email">
-                <span class="glyphicon form-control-feedback"></span> 
-                <span class="validate-redlight"></span>         
+                <span class="glyphicon form-control-feedback"></span>
+                <span class="validate-redlight"></span>
               </div>
 
               <div class="form-group-sm has-feedback">
                 <label for="message">Message:</label>
                 <textarea class="form-control" rows="4" id="message"></textarea>
-                <span class="glyphicon form-control-feedback"></span> 
-                <span class="validate-redlight"></span>         
+                <span class="glyphicon form-control-feedback"></span>
+                <span class="validate-redlight"></span>
               </div>
 
             <button id="sendmessage" type="submit" class="submit buttoncolor btn btn-sm">Send Message</button>
@@ -271,10 +294,10 @@
           <div class="mastfoot">
             <div class="inner">
               <div class="btn-group">
-                <a href="https://www.linkedin.com/in/tye-campbell-a5619913b/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
                 <a href="https://github.com/TyeCampbell"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/tyecampbelldev/"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/CampbellTye"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+                <!-- <a href="https://www.facebook.com/TyeDev/"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a> -->
+                <a href="https://twitter.com/TyeDev"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/tye-campbell-a5619913b/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
