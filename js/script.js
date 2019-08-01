@@ -131,6 +131,7 @@ $(document).ready(function(){
  $(document).ready(function(){
 	$("#preview-sandy-admin").click(function(){
 		$("#previewSite").attr("src","images/portfolio-macbook-sandyAdmin.png");
+		$(".previewLink").attr("href","http://www.tyecampbell.com/sandyspetshop/admin.php");
 	});
 });
 
