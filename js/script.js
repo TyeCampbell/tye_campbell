@@ -304,3 +304,8 @@ function initMap() {
           map: map
         });
       }
+
+
+	  /* ---------- Greetings ---------- */
+
+	  console.log("Hello! Welcome to my personal site!");
