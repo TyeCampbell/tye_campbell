@@ -1,6 +1,6 @@
 # Tye Campbell Portfolio Site
 
-![Preview of homepage of tyecampbell.com](docs/preview.gif)
+![Preview of homepage of tyecampbell.com](docs/preview.png)
 
 [Click here](https://www.tyecampbell.com) to visit my personal website. 
 
