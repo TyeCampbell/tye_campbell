@@ -263,27 +263,35 @@
   <!-- Contact Page Div -->
           <div id="contactpage" class="inner cover">
             <h1 class="cover-heading">Contact</h1>
-            <form name="contactus" id="contactus" onsubmit="submitForm(); return false">
 
+              <!-- 
+              -- previous form --- 
+              <form name="contactus" id="contactus" onsubmit="submitForm(); return false"> 
+              -->
+            <form name="contactus" id="contactus" action="POST" data-netlify="true" onsubmit="submitForm(); return false">
               <div class="form-group-sm has-feedback">
                 <label for="fname">Name:</label>
-                <input type="text" class="form-control has-error" id="fname">
+                <input type="text" class="form-control has-error" id="fname" name="name">
                 <span class="glyphicon form-control-feedback"></span>
                 <span class="validate-redlight"></span>
               </div>
 
               <div class="form-group-sm has-feedback">
                 <label for="email">Email Address:</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" name="email">
                 <span class="glyphicon form-control-feedback"></span>
                 <span class="validate-redlight"></span>
               </div>
 
               <div class="form-group-sm has-feedback">
                 <label for="message">Message:</label>
-                <textarea class="form-control" rows="4" id="message"></textarea>
+                <textarea class="form-control" rows="4" id="message" name="message"></textarea>
                 <span class="glyphicon form-control-feedback"></span>
                 <span class="validate-redlight"></span>
+              </div>
+
+              <div class="form-group-sm">
+                <div data-netlify-recaptcha="true"></div>
               </div>
 
             <button id="sendmessage" type="submit" class="submit buttoncolor btn btn-sm">Send Message</button>

@@ -250,7 +250,8 @@ function submitForm() {
 			submitValidate($message);
 		};
 	} else {
-		sendForm();
+		// sendForm();
+		console.log("Email Sent!")
 	}
 }
 
