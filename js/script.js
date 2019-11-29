@@ -226,9 +226,25 @@ $("#contactus").submit(function(e) {
   
 	var $form = $(this);
 	$.post($form.attr("action"), $form.serialize()).then(function() {
-	  alert("Thank you!");
+	  formSuccess();
 	});
   });
+
+  function formSuccess() {
+
+	var $firstName = $("#fname");
+	var $email = $("#email");
+	var $message = $("#message");
+
+	$('#contactModal').modal({show: true});
+	$("#statusheader").html("Thank you!");
+	$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
+	$firstName.val("");
+	$email.val("");
+	$message.val("");
+	$("#sendmessage").removeClass("disabled");
+
+}
 
 
 /* ---------- Google Map API ---------- */
