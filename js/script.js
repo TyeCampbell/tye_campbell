@@ -233,14 +233,6 @@ $("#message").blur(function(){
 // 	});
 // });
 
-$("#contactus").submit(function(e) {
-	e.preventDefault();
-  
-	var $form = $(this);
-	$.post($form.attr("action"), $form.serialize()).then(function() {
-	  alert("Thank you message here!");
-	});
-  });
 
 function submitForm() {
 
@@ -270,7 +262,10 @@ function submitForm() {
 			submitValidate($message);
 		};
 	} else {
-		console.log("I have your message! I'll be in touch with you soon.")
+		$('#contactModal').modal({show: true});
+		$("#statusheader").html("Thank you!");
+		$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
+		$("#sendmessage").removeClass("disabled");
 	}
 }
 
