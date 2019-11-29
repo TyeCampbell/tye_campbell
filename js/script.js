@@ -266,6 +266,7 @@ function submitForm() {
 		$("#statusheader").html("Thank you!");
 		$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
 		$("#sendmessage").removeClass("disabled");
+		return true;
 	}
 }
 
