@@ -194,8 +194,8 @@ if ($(this).val() == "") {
 	};
 });
 
-/* Validate Message Body Address */
 
+/* Validate Message Body Address */
 
 $("#message").blur(function(){
 		if ($(this).val() == "") {
@@ -221,6 +221,26 @@ $("#message").blur(function(){
 		};
 });
 
+
+/* Contact Modal for Form Submission */
+
+// $(document).ready(function(){
+// 	$("#sendmessage").click(function(){
+// 		$('#contactModal').modal({show: true});
+// 		$("#statusheader").html("Thank you!");
+// 		$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
+// 		$("#sendmessage").removeClass("disabled");
+// 	});
+// });
+
+$("#contactus").submit(function(e) {
+	e.preventDefault();
+  
+	var $form = $(this);
+	$.post($form.attr("action"), $form.serialize()).then(function() {
+	  alert("Thank you message here!");
+	});
+  });
 
 function submitForm() {
 
