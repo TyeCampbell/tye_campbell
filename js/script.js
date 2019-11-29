@@ -237,9 +237,7 @@ function formSuccess() {
 	
 };
 
-$("#contactus").submit(function(e) {
-	e.preventDefault();
-	var $form = $(this);
+function submitForm() {
 
 	var $firstName = $("#fname");
 	var $email = $("#email");
@@ -267,11 +265,20 @@ $("#contactus").submit(function(e) {
 			submitValidate($message);
 		};
 	} else {
-		$.post($form.attr("action"), $form.serialize()).then(function() {
+
+		$("#contactus").submit(function(e) {
+			e.preventDefault();
+		
+			var $form = $(this);
+			$.post($form.attr("action"), $form.serialize()).then(function() {
 			formSuccess();
-		});	
+			});
+		});
+		
 	}
-  });
+}
+
+
 
 
 /* ---------- Google Map API ---------- */
