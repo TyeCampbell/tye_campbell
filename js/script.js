@@ -105,7 +105,6 @@ $(document).ready(function(){
 		$("#previewTitle").text("Objective Box");
 		$('#previewLinkPara').hide();
 		$("#previewSite").attr("src","images/portfolio-macbook-objectivebox.png");
-		// $("#previewSite").attr("alt","Objective Box Website Preview on MacBook");
 	});
 });
 
@@ -118,8 +117,7 @@ $(document).ready(function(){
 		$("#previewBody-hlfarm").hide();
 		$("#previewBody-sandyspet").show();
 		$("#previewTitle").text("Sandy's Pet Shop");
-		// $("#previewSite").attr("src","http://www.tyecampbell.com/sandyspetshop/");
-		$('#previewLinkPara').show();
+		$('#previewLinkPara').hide();
 		$("#previewSite").attr("src","images/portfolio-macbook-sandy.png");
 		$(".previewLink").attr("href","http://www.tyecampbell.com/sandyspetshop/");
 	});
@@ -194,8 +192,8 @@ if ($(this).val() == "") {
 	};
 });
 
-/* Validate Message Body Address */
 
+/* Validate Message Body Address */
 
 $("#message").blur(function(){
 		if ($(this).val() == "") {
@@ -221,6 +219,21 @@ $("#message").blur(function(){
 		};
 });
 
+function formSuccess() {
+	
+	var $firstName = $("#fname");
+	var $email = $("#email");
+	var $message = $("#message");
+	
+	$('#contactModal').modal({show: true});
+	$("#statusheader").html("Thank you!");
+	$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
+	$firstName.val("");
+	$email.val("");
+	$message.val("");
+	$("#sendmessage").removeClass("disabled");
+	
+};
 
 function submitForm() {
 
@@ -250,46 +263,21 @@ function submitForm() {
 			submitValidate($message);
 		};
 	} else {
-		sendForm();
+
+		$("#contactus").submit(function(e) {
+			e.preventDefault();
+		
+			var $form = $(this);
+			$.post($form.attr("action"), $form.serialize()).then(function() {
+			formSuccess();
+			});
+		});
+		
 	}
 }
 
-/* SendForm via AJAX*/
 
-function sendForm() {
 
-	$("#sendmessage").addClass("disabled");
-
-	var $firstName = $("#fname");
-	var $email = $("#email");
-	var $message = $("#message");
-
-	var formdata = new FormData();
-	formdata.append("fname", $firstName.val());
-	formdata.append("email", $email.val());
-	formdata.append("message", $message.val());
-	var ajax = new XMLHttpRequest();
-	ajax.open("POST", "email_parser.php");
-	ajax.onreadystatechange = function() {
-		if (ajax.readyState == 4 && ajax.status == 200) {
-			if (ajax.responseText == "success") {
-				$('#contactModal').modal({show: true});
-				$("#statusheader").html("Thank you!");
-				$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
-				$firstName.val("");
-				$email.val("");
-				$message.val("");
-				$("#sendmessage").removeClass("disabled");
-			} else {
-				$('#mymodal').modal({show: true});
-				$("#statusheader").html("There was an error sending your message. Please try again later.");
-				$("#status").html(ajax.responseText);
-				$("#sendmessage").removeClass("disabled");
-			}
-		}
-	}
-	ajax.send(formdata);
-}
 
 /* ---------- Google Map API ---------- */
 

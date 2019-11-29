@@ -263,28 +263,30 @@
   <!-- Contact Page Div -->
           <div id="contactpage" class="inner cover">
             <h1 class="cover-heading">Contact</h1>
-            <form name="contactus" id="contactus" onsubmit="submitForm(); return false">
 
+            <form name="contactus" id="contactus" data-netlify="true" data-netlify-recaptcha="true" onsubmit="submitform(); return false">
               <div class="form-group-sm has-feedback">
                 <label for="fname">Name:</label>
-                <input type="text" class="form-control has-error" id="fname">
+                <input type="text" class="form-control has-error" id="fname" name="name">
                 <span class="glyphicon form-control-feedback"></span>
                 <span class="validate-redlight"></span>
               </div>
 
               <div class="form-group-sm has-feedback">
                 <label for="email">Email Address:</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" name="email">
                 <span class="glyphicon form-control-feedback"></span>
                 <span class="validate-redlight"></span>
               </div>
 
               <div class="form-group-sm has-feedback">
                 <label for="message">Message:</label>
-                <textarea class="form-control" rows="4" id="message"></textarea>
+                <textarea class="form-control" rows="4" id="message" name="message"></textarea>
                 <span class="glyphicon form-control-feedback"></span>
                 <span class="validate-redlight"></span>
               </div>
+              
+              <div class="recaptcha" data-netlify-recaptcha="true"></div>
 
             <button id="sendmessage" type="submit" class="submit buttoncolor btn btn-sm">Send Message</button>
           </form>
@@ -295,7 +297,6 @@
             <div class="inner">
               <div class="btn-group">
                 <a href="https://github.com/TyeCampbell"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
-                <!-- <a href="https://www.facebook.com/TyeDev/"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a> -->
                 <a href="https://twitter.com/TyeDev"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
                 <a href="https://www.linkedin.com/in/tye-campbell-a5619913b/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
               </div>
