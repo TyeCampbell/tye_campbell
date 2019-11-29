@@ -264,7 +264,7 @@
           <div id="contactpage" class="inner cover">
             <h1 class="cover-heading">Contact</h1>
 
-            <form name="contactus" id="contactus" data-netlify="true" data-netlify-recaptcha="true">
+            <form name="contactus" id="contactus" data-netlify="true" data-netlify-recaptcha="true" onsubmit="submitForm(); return false">
               <div class="form-group-sm has-feedback">
                 <label for="fname">Name:</label>
                 <input type="text" class="form-control has-error" id="fname" name="name">
