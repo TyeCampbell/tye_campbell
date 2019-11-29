@@ -250,7 +250,7 @@ function submitForm() {
 			submitValidate($message);
 		};
 	} else {
-		console.log("Email Sent!")
+		alert("I have your message! I'll be in touch with you soon.")
 	}
 }
 
