@@ -221,56 +221,6 @@ $("#message").blur(function(){
 		};
 });
 
-
-/* Contact Modal for Form Submission */
-
-// $(document).ready(function(){
-// 	$("#sendmessage").click(function(){
-// 		$('#contactModal').modal({show: true});
-// 		$("#statusheader").html("Thank you!");
-// 		$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
-// 		$("#sendmessage").removeClass("disabled");
-// 	});
-// });
-
-
-function submitForm() {
-
-	var $firstName = $("#fname");
-	var $email = $("#email");
-	var $message = $("#message");
-
-	function submitValidate(element) {
-		$(element).parent().addClass("has-error");
-		$(element).next("span").addClass("glyphicon-remove");
-		$(element).next("span").next().html("Required information.");
-	};
-
-	if ($firstName.val() == "" || $email.val() == "" || $message.val() == "" || $message.val().length < 5) {
-
-		$("#sendmessage").addClass("disabled");
-
-		if ($firstName.val() == "") {
-			submitValidate($firstName);
-		};
-
-		if ($email.val() == "") {
-			submitValidate($email);
-		};
-
-		if ($message.val() == "" || $message.val().length < 5){
-			submitValidate($message);
-		};
-	} else {
-		$('#contactModal').modal({show: true});
-		$("#statusheader").html("Thank you!");
-		$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
-		$("#sendmessage").removeClass("disabled");
-		return true;
-	}
-}
-
-
 /* ---------- Google Map API ---------- */
 
 function initMap() {
