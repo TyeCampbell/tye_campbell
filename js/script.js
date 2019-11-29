@@ -105,7 +105,6 @@ $(document).ready(function(){
 		$("#previewTitle").text("Objective Box");
 		$('#previewLinkPara').hide();
 		$("#previewSite").attr("src","images/portfolio-macbook-objectivebox.png");
-		// $("#previewSite").attr("alt","Objective Box Website Preview on MacBook");
 	});
 });
 
@@ -118,8 +117,7 @@ $(document).ready(function(){
 		$("#previewBody-hlfarm").hide();
 		$("#previewBody-sandyspet").show();
 		$("#previewTitle").text("Sandy's Pet Shop");
-		// $("#previewSite").attr("src","http://www.tyecampbell.com/sandyspetshop/");
-		$('#previewLinkPara').show();
+		$('#previewLinkPara').hide();
 		$("#previewSite").attr("src","images/portfolio-macbook-sandy.png");
 		$(".previewLink").attr("href","http://www.tyecampbell.com/sandyspetshop/");
 	});
