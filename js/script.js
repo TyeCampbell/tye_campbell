@@ -221,22 +221,21 @@ $("#message").blur(function(){
 		};
 });
 
-
 function formSuccess() {
-
-  var $firstName = $("#fname");
-  var $email = $("#email");
-  var $message = $("#message");
-
-  $('#contactModal').modal({show: true});
-  $("#statusheader").html("Thank you!");
-  $("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
-  $firstName.val("");
-  $email.val("");
-  $message.val("");
-  $("#sendmessage").removeClass("disabled");
-}, 
-
+	
+	var $firstName = $("#fname");
+	var $email = $("#email");
+	var $message = $("#message");
+	
+	$('#contactModal').modal({show: true});
+	$("#statusheader").html("Thank you!");
+	$("#status").html("Thanks for the message, " + $firstName.val() + "! I will respond to your request as soon as possible.");
+	$firstName.val("");
+	$email.val("");
+	$message.val("");
+	$("#sendmessage").removeClass("disabled");
+	
+};
 
 $("#contactus").submit(function(e) {
 	e.preventDefault();
@@ -246,7 +245,6 @@ $("#contactus").submit(function(e) {
 	  formSuccess();
 	});
   });
-
 
 
 /* ---------- Google Map API ---------- */
