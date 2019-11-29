@@ -250,7 +250,7 @@ function submitForm() {
 			submitValidate($message);
 		};
 	} else {
-		alert("I have your message! I'll be in touch with you soon.")
+		console.log("I have your message! I'll be in touch with you soon.")
 	}
 }
 
