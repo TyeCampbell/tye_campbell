@@ -282,7 +282,7 @@ $("#contactus").submit(function(e) {
 
 	var $form = $(this);
 	$.post($form.attr("action"), $form.serialize()).then(function() {
-	console.log("thank you!");
+	formSuccess()
 	});
 });
 
