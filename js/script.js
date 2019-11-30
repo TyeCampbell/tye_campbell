@@ -235,48 +235,56 @@ function formSuccess() {
 	
 };
 
-function submitForm() {
+// function submitForm() {
 
-	var $firstName = $("#fname");
-	var $email = $("#email");
-	var $message = $("#message");
+// 	var $firstName = $("#fname");
+// 	var $email = $("#email");
+// 	var $message = $("#message");
 
-	function submitValidate(element) {
-		$(element).parent().addClass("has-error");
-		$(element).next("span").addClass("glyphicon-remove");
-		$(element).next("span").next().html("Required information.");
-	};
+// 	function submitValidate(element) {
+// 		$(element).parent().addClass("has-error");
+// 		$(element).next("span").addClass("glyphicon-remove");
+// 		$(element).next("span").next().html("Required information.");
+// 	};
 
-	if ($firstName.val() == "" || $email.val() == "" || $message.val() == "" || $message.val().length < 5) {
+// 	if ($firstName.val() == "" || $email.val() == "" || $message.val() == "" || $message.val().length < 5) {
 
-		$("#sendmessage").addClass("disabled");
+// 		$("#sendmessage").addClass("disabled");
 
-		if ($firstName.val() == "") {
-			submitValidate($firstName);
-		};
+// 		if ($firstName.val() == "") {
+// 			submitValidate($firstName);
+// 		};
 
-		if ($email.val() == "") {
-			submitValidate($email);
-		};
+// 		if ($email.val() == "") {
+// 			submitValidate($email);
+// 		};
 
-		if ($message.val() == "" || $message.val().length < 5){
-			submitValidate($message);
-		};
-	} else {
+// 		if ($message.val() == "" || $message.val().length < 5){
+// 			submitValidate($message);
+// 		};
+// 	} else {
 
-		$("#contactus").submit(function(e) {
-			e.preventDefault();
+// 		$("#contactus").submit(function(e) {
+// 			e.preventDefault();
 		
-			var $form = $(this);
-			$.post($form.attr("action"), $form.serialize()).then(function() {
-			formSuccess();
-			});
-		});
+// 			var $form = $(this);
+// 			$.post($form.attr("action"), $form.serialize()).then(function() {
+// 			formSuccess();
+// 			});
+// 		});
 		
-	}
-}
+// 	}
+// }
 
 
+$("#contactus").submit(function(e) {
+	e.preventDefault();
+
+	var $form = $(this);
+	$.post($form.attr("action"), $form.serialize()).then(function() {
+	formSuccess();
+	});
+});
 
 
 /* ---------- Google Map API ---------- */
