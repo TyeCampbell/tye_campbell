@@ -307,7 +307,7 @@ $("#contactus").submit(function(e) {
 		};
 	} else {		
 		$.post($form.attr("action"), $form.serialize()).then(function() {
-		  alert("Thank you!");
+		  formSuccess();
 		});
 	}
   });
