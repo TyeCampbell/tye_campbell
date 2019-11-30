@@ -235,8 +235,11 @@ function formSuccess() {
 	
 };
 
-function submitForm() {
 
+$("#contactus").submit(function(e) {
+	e.preventDefault();
+  
+	var $form = $(this);
 	var $firstName = $("#fname");
 	var $email = $("#email");
 	var $message = $("#message");
@@ -262,20 +265,12 @@ function submitForm() {
 		if ($message.val() == "" || $message.val().length < 5){
 			submitValidate($message);
 		};
-	} else {
-
-		$("#contactus").submit(function(e) {
-			e.preventDefault();
-		
-			var $form = $(this);
-			$.post($form.attr("action"), $form.serialize()).then(function() {
-			formSuccess();
-			});
+	} else {		
+		$.post($form.attr("action"), $form.serialize()).then(function() {
+		  formSuccess();
 		});
-		
 	}
-}
-
+  });
 
 
 
@@ -293,7 +288,6 @@ function initMap() {
         });
       }
 
+/* ---------- Greetings ---------- */
 
-	  /* ---------- Greetings ---------- */
-
-	  console.log("Hello! Welcome to my personal site!");
+	console.log("Hello! Welcome to my personal site! Thanks for inspecting my code.");
