@@ -279,11 +279,39 @@ function formSuccess() {
 
 $("#contactus").submit(function(e) {
 	e.preventDefault();
-
+	
 	var $form = $(this);
-	$.post($form.attr("action"), $form.serialize()).then(function() {
-	formSuccess()
-	});
+	var $firstName = $("#fname");
+	var $email = $("#email");
+	var $message = $("#message");
+
+	function submitValidate(element) {
+		$(element).parent().addClass("has-error");
+		$(element).next("span").addClass("glyphicon-remove");
+		$(element).next("span").next().html("Required information.");
+	};
+
+	if ($firstName.val() == "" || $email.val() == "" || $message.val() == "" || $message.val().length < 5) {
+
+		$("#sendmessage").addClass("disabled");
+
+		if ($firstName.val() == "") {
+			submitValidate($firstName);
+		};
+
+		if ($email.val() == "") {
+			submitValidate($email);
+		};
+
+		if ($message.val() == "" || $message.val().length < 5){
+			submitValidate($message);
+		};
+	} else {
+
+		$.post($form.attr("action"), $form.serialize()).then(function() {
+		formSuccess()
+		});
+
 });
 
 
