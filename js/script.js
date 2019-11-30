@@ -276,12 +276,10 @@ function formSuccess() {
 // 	}
 // }
 
-
 $("#contactus").submit(function(e) {
 	e.preventDefault();
-
+  
 	var $form = $(this);
-
 	var $firstName = $("#fname");
 	var $email = $("#email");
 	var $message = $("#message");
@@ -307,16 +305,13 @@ $("#contactus").submit(function(e) {
 		if ($message.val() == "" || $message.val().length < 5){
 			submitValidate($message);
 		};
-	} else {
-
-			$.post($form.attr("action"), $form.serialize()).then(function() {
-			formSuccess();
-			});
+	} else {		
+		$.post($form.attr("action"), $form.serialize()).then(function() {
+		  alert("Thank you!");
 		});
-		
 	}
+  });
 
-});
 
 
 /* ---------- Google Map API ---------- */
