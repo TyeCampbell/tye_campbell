@@ -279,8 +279,9 @@ function formSuccess() {
 
 $("#contactus").submit(function(e) {
 	e.preventDefault();
-	
+
 	var $form = $(this);
+
 	var $firstName = $("#fname");
 	var $email = $("#email");
 	var $message = $("#message");
@@ -308,9 +309,12 @@ $("#contactus").submit(function(e) {
 		};
 	} else {
 
-		$.post($form.attr("action"), $form.serialize()).then(function() {
-		formSuccess()
+			$.post($form.attr("action"), $form.serialize()).then(function() {
+			formSuccess();
+			});
 		});
+		
+	}
 
 });
 
