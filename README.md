@@ -9,4 +9,4 @@
 This static single page website is built with HTML, CSS, Bootstrap, JavaScript and jQuery. A bit of PHP is also used for the email contact box as well. This site was designed with mobile first in mind and is responsive to different viewport sizes. 
 
 
-:thumbsup: *Thanks for checking out my work on GitHub! For more about me find me on Twitter [@TyeDev](https://twitter.com/tyedev) or vist my personal website [TyeCampbell.com](www.TyeCampbell.com).*
+:thumbsup: *Thanks for checking out my work on GitHub! For more about me find me on Twitter [@TyeDev](https://twitter.com/tyedev) or visit my personal website [TyeCampbell.com](www.TyeCampbell.com).*
